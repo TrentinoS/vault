@@ -230,5 +230,9 @@ app.delete('/api/passwords/:id', authMiddleware, async (req, res) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.send('Backend server is running');
+});
+
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
