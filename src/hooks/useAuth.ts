@@ -7,7 +7,7 @@ export function useAuth() {
   const [loading, setLoading] = useState(true);
 
   const login = async (email: string, password: string) => {
-    const res = await fetch("http://localhost:5001/api/auth/login", {
+    const res = await fetch("http://80.225.194.38:5001/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -20,7 +20,7 @@ export function useAuth() {
   };
 
   const register = async (name: string, email: string, password: string) => {
-    const res = await fetch("http://localhost:5001/api/auth/register", {
+    const res = await fetch("http://80.225.194.38:5001/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, password }),
