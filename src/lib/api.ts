@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5001/api";
+const API_URL = "http://80.225.194.38:5001/api";
 
 export async function api(path: string, options: RequestInit = {}) {
   const token = localStorage.getItem("vault_token") || "";
